@@ -1,6 +1,6 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "@fuse-fonts/website",
+  "description": "The website for the Fuse Fonts Adobe Photoshop Plugin",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
