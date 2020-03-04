@@ -1,5 +1,5 @@
 <script>
-  import Nav from '../components/Nav.svelte';
+  import Nav from "../components/Nav.svelte";
 
   export let segment;
 </script>
@@ -11,10 +11,17 @@
     padding: 2em;
     margin: 0 auto;
   }
+
+  :global(html) {
+    --background-color: #151413;
+    --text-color: #f3f2f2;
+    --accent-color: #f2bbaa;
+  }
+
 </style>
 
-<Nav {segment}/>
+<Nav {segment} />
 
 <main>
-  <slot></slot>
+  <slot />
 </main>
