@@ -13,9 +13,13 @@
   }
 
   :global(html) {
-    --background-color: #151413;
+    --background-color: #1e1e1e;
     --text-color: #f3f2f2;
-    --accent-color: #f2bbaa;
+    --accent-color: #ffcf00;
+  }
+
+  :global(.accent) {
+    color: var(--accent-color);
   }
 
 </style>
