@@ -6,10 +6,10 @@
 <style>
 
   header {
-    display: flex;
+    display: block;
     width: 100%;
     padding: 0rem 1rem;
-    background-color: #000;
+    background-color: #060b04;
   }
 
   nav {
@@ -19,6 +19,7 @@
 
   ul {
     display: flex;
+    justify-content: space-evenly;
   }
 
   li {
@@ -50,7 +51,9 @@
   .logo {
     font-weight: 800;
     text-transform: uppercase;
-    margin-right: 1em;
+    width: 100%;
+    text-align: center;
+    margin-left: -1rem;
   }
 
   .logo::before {
@@ -61,6 +64,18 @@
     margin-right: 0.5em;
     background-color: var(--accent-color);
     border-radius: 2px;
+  }
+
+  @media (min-width: 36em) {
+    .logo {
+      text-align: left;
+      width: auto;
+      margin: 0 1rem 0 0;
+    }
+
+    header {
+      display: flex;
+    }
   }
 </style>
 
