@@ -68,9 +68,7 @@
       <div class="content-block">
         <h3>What is <span class="accent">Fuse Fonts</span>?</h3>
         <p>
-          Fuse Fonts is an Adobe Photoshop panel, meaning it’s integrated into
-          Photoshop. Install and enable the panel, and start organizing your
-          fonts.
+          Fuse Fonts is an Adobe Photoshop panel, meaning it’s integrated into Photoshop. Install it, enable the panel in Photoshop, then and start organizing your fonts.
         </p>
       </div>
       <div class="content-block">
@@ -85,7 +83,7 @@
     <div class="content-block">
       <h3>Why?</h3>
       <p>
-        Fuse Fonts is designed to solve one simple problem: make working with fonts in Photoshop easier and more productive.
+        Fuse Fonts is designed to solve one problem with a simple solution. By <em>designing for simplicity</em>, it makes working with fonts in Photoshop easier and more productive. Too often software is bloated, hard-to-use, or is harvesting your data for profit. We're against all of that.
       </p>
       <p>
         Whether you’re a design agency or freelancer with many clients, or
@@ -93,7 +91,7 @@
         Fonts will keep you more organized, and productive.
       </p>
       <p class="accent">
-        <a href="features">Learn about Fuse Fonts' features</a>
+        <a href="features">Learn about Fuse Fonts features</a>
       </p>
     </div>
   </Container>
