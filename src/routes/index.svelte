@@ -3,12 +3,18 @@
   import Container from "../components/Container.svelte";
 
   let overviewEl = null;
+  let purchaseEl = null;
 
-  function scrollOverViewIntoView() {
-    if (overviewEl === null) return;
-
-    overviewEl.scrollIntoView({ behavior: "smooth" });
+  function scrollElementIntoView(el) {
+    return () => {
+      if (el === null) return;
+      el.scrollIntoView({ behavior: "smooth" });
+    }
   }
+
+  $: scrollOverviewIntoView = scrollElementIntoView(overviewEl);
+  $: scrollPurchaseIntoView = scrollElementIntoView(purchaseEl);
+
 </script>
 
 <style>
@@ -28,22 +34,28 @@
 
   .overview {
     background-color: var(--secondary-background-color);
-    padding: 20vh 0;
+    padding: 15vh 0;
+  }
+
+  .purchase {
+    padding: 15vh 0;
+    background-color: #cacfcc;
+    color: #333;
   }
 
   @media (min-width: 56em) {
-  .flex-columns {
+  .two-columns {
       display: flex;
       justify-content: space-between;
     }
 
-    .flex-columns .content-block {
+    .two-columns .content-block {
       max-width: 24.5em;
       margin-bottom: 1em;
       margin-right: 1em;
     }
 
-    .flex-columns .content-block:last-child {
+    .two-columns .content-block:last-child {
       margin-right: 0em;
     }
   }
@@ -58,13 +70,13 @@
 </svelte:head>
 
 <Container>
-  <Hero on:learn-more={scrollOverViewIntoView} />
+  <Hero on:learn-more={scrollOverviewIntoView} on:buy={scrollPurchaseIntoView} />
 </Container>
 
 <section class="overview" id="overview" bind:this={overviewEl}>
   <Container>
     <h2>Overview</h2>
-    <div class="flex-columns">
+    <div class="two-columns">
       <div class="content-block">
         <h3>What is <span class="accent">Fuse Fonts</span>?</h3>
         <p>
@@ -75,7 +87,7 @@
         <h3>How is it used?</h3>
         <p>
           Create a group, name it whatever, and drag some fonts into the group.
-          It's simple and intuitive interface will help you stay organized however you like.
+          The simple and intuitive interface will help you stay organized however you like.
         </p>
       </div>
 
@@ -93,6 +105,33 @@
       <p class="accent">
         <a href="features">Learn about Fuse Fonts features</a>
       </p>
+    </div>
+  </Container>
+</section>
+
+<section class="purchase" id="purchase" bind:this={purchaseEl}>
+  <Container>
+    <h2>Purchase Fuse Fonts</h2>
+
+    <div class="purchase-options">
+      <div class="option">
+        <h4>Creative Market</h4>
+        <ul>
+          <li>Free Updates</li>
+          <li>Manually update whenever you want</li>
+          <li>Email Support</li>
+        </ul>
+        <a href="">Buy on Creative Market</a>
+      </div>
+      <div class="option">
+        <h4>Adobe Marketplace</h4>
+        <ul>
+          <li>Free Updates</li>
+          <li>Automatic Updates</li>
+          <li>Email Support</li>
+        </ul>
+        <a href="">Buy on Adobe Marketplace</a>
+      </div>
     </div>
   </Container>
 </section>
