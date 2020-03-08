@@ -41,4 +41,9 @@
 <section class="hero">
   <h1 class="logo">Fuse Fonts</h1>
   <h2>Organize your fonts into simple collections within Adobe Photoshop.</h2>
+  <nav>
+    <a href="features">See Features</a>
+    <a href="#">Buy on Creative Market</a>
+    <a href="#">Buy on Adobe Marketplace</a>
+  </nav>
 </section>
