@@ -1,5 +1,13 @@
+<script>
+  import Container from "../components/Container.svelte";
+
+</script>
+
 <svelte:head>
   <title>Features</title>
 </svelte:head>
 
-<h1>Features</h1>
+<Container>
+  <h1>Features</h1>
+</Container>
+

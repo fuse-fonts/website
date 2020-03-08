@@ -1,5 +1,10 @@
+<script>
+  import Container from "../components/Container.svelte";
+</script>
 <svelte:head>
   <title>Learn</title>
 </svelte:head>
 
-<h1>Learn</h1>
+<Container>
+  <h1>Learn</h1>
+</Container>

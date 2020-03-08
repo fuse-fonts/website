@@ -6,11 +6,9 @@
 
 <style>
   main {
-    position: relative;
-    max-width: 56em;
-    padding: 2em;
-    margin: 0 auto;
+    padding: 2em 0;
   }
+
 
   :global(html) {
     --background-color: #1e1e1e;
