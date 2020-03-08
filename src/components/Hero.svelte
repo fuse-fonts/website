@@ -87,7 +87,7 @@
   <h1 class="logo">Fuse Fonts</h1>
   <h2>Organize your fonts into simple collections within Adobe Photoshop.</h2>
   <nav class="hero-actions">
-    <button class="btn-link btn-link--buy">Buy</button>
+    <button class="btn-link btn-link--buy" on:click={buyClicked}>Buy</button>
     <button class="btn-link" on:click={learnMoreClicked}>Learn More</button>
     <a class="btn-link" href="features">Features</a>
   </nav>
@@ -98,8 +98,7 @@
 
   const dispatch = createEventDispatcher();
 
-  function learnMoreClicked() {
-    dispatch("learn-more");
-  }
+  const buyClicked = () => dispatch("buy");
+  const learnMoreClicked = () => dispatch("learn-more");
 
 </script>
