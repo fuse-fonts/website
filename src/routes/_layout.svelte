@@ -6,7 +6,7 @@
 
 <style>
   main {
-    padding: 2em 0;
+    padding-top: 2em;
   }
 
 

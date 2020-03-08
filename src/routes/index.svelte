@@ -86,7 +86,7 @@
       <div class="content-block">
         <h3>How is it used?</h3>
         <p>
-          Create a group, name it whatever, and drag some fonts into the group.
+          Create a group, name it, and drag some fonts into it.<br />
           The simple and intuitive interface will help you stay organized however you like.
         </p>
       </div>
