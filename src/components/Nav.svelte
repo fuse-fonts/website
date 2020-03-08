@@ -76,6 +76,8 @@
 
     header {
       display: flex;
+      position: sticky;
+      top: 0;
     }
   }
 </style>
