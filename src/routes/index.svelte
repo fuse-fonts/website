@@ -179,7 +179,7 @@
         <ul>
           <li>Free Updates</li>
           <li>Email Support</li>
-          <li>You update it</li>
+          <li>Manually Updated</li>
         </ul>
         <footer>
           <a href="" class="btn-link btn-link--buy">Buy on Creative Market</a>
