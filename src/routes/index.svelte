@@ -27,7 +27,7 @@
   }
 
   .overview {
-    background-color: #121b16;
+    background-color: var(--secondary-background-color);
     padding: 20vh 0;
   }
 
@@ -66,7 +66,7 @@
     <h2>Overview</h2>
     <div class="flex-columns">
       <div class="content-block">
-        <h3>What is Fuse Fonts?</h3>
+        <h3>What is <span class="accent">Fuse Fonts</span>?</h3>
         <p>
           Fuse Fonts is an Adobe Photoshop panel, meaning it’s integrated into
           Photoshop. Install and enable the panel, and start organizing your
@@ -85,13 +85,15 @@
     <div class="content-block">
       <h3>Why?</h3>
       <p>
-        Fuse Fonts is designed to solve one problem, simply. Our goal is to make working with fonts in Photoshop easier and more organized.
-        <a href="features">Learn about Fuse Fonts' features.</a>
+        Fuse Fonts is designed to solve one simple problem: make working with fonts in Photoshop easier and more productive.
       </p>
       <p>
         Whether you’re a design agency or freelancer with many clients, or
         keeping track of campaigns and projects as an enterprise designer, Fuse
         Fonts will keep you more organized, and productive.
+      </p>
+      <p class="accent">
+        <a href="features">Learn about Fuse Fonts' features</a>
       </p>
     </div>
   </Container>
