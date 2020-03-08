@@ -37,12 +37,13 @@
     content: "";
     width: calc(100% - 1em);
     height: 2px;
-    background-color: var(--accent-color);
+    background-color: #333b33;
     display: block;
     bottom: -1px;
   }
 
   a {
+    color: var(--text-color);
     text-decoration: none;
     padding: 1em 0.5em;
     display: block;
@@ -100,7 +101,7 @@
       </a>
     </li>
     <li>
-      <a aria-current={segment === 'learn' ? 'page' : undefined} href="about">
+      <a aria-current={segment === 'learn' ? 'page' : undefined} href="learn">
         Learn
       </a>
     </li>

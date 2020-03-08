@@ -18,7 +18,12 @@ h1 {
 }
 
 a {
-  color: inherit;
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 code {
@@ -34,4 +39,44 @@ code {
   body {
     font-size: 16px;
   }
+}
+
+.btn-link {
+  display: inline-block;
+  background: transparent;
+  border: 1px solid #b2b2b2;
+  padding: 0.5em 1.5em;
+  color: #ddd;
+  text-decoration: none;
+  font-size: 1em;
+  line-height: 1.6em;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.btn-link:hover {
+  background-color: #332;
+}
+
+.btn-link + .btn-link {
+  margin-left: 0.5em;
+}
+
+.btn-link--buy {
+  padding: 0.5em 1em;
+  background: var(--accent-color);
+  color: #222;
+  border: 1px solid var(--accent-color);
+  border-radius: 3px;
+  transition: 0.1s ease-out all;
+  transform: scale(1);
+}
+
+.btn-link:active {
+  transform: scale(0.98);
+}
+
+.btn-link--buy:hover {
+  background-color: #ffd941;
+  color: #000;
 }
