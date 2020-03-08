@@ -33,7 +33,7 @@
     }
 
     .hero {
-      padding: 25vh 0;
+      padding: 25vh 0 45vh 0;
     }
   }
 </style>
@@ -41,9 +41,9 @@
 <section class="hero">
   <h1 class="logo">Fuse Fonts</h1>
   <h2>Organize your fonts into simple collections within Adobe Photoshop.</h2>
-  <nav>
-    <a href="features">See Features</a>
-    <a href="#">Buy on Creative Market</a>
-    <a href="#">Buy on Adobe Marketplace</a>
+  <nav class="hero-actions">
+    <a class="btn-link" href="#overview">Learn More</a>
+    <a class="btn-link" href="features">See Features</a>
+    <button class="btn-link">Buy</button>
   </nav>
 </section>

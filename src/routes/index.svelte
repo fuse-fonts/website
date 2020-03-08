@@ -1,3 +1,7 @@
+<script>
+  import Hero from "../components/Hero.svelte";
+</script>
+
 <style>
 
 </style>
@@ -8,11 +12,6 @@
 
 <Hero />
 
-<section class="appeal">
-  <p>This is the fuse fonts marketing website.</p>
+<section class="overview" id="overview">
+  <h2>How it works</h2>
 </section>
-
-
-<script>
-  import Hero from "../components/Hero.svelte";
-</script>
