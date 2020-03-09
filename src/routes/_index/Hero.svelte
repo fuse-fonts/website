@@ -6,6 +6,12 @@
     margin: 0 0 0.5rem 0;
   }
 
+  .description {
+    font-size: 1.6em;
+    font-weight: 200;
+    line-height: 1.6em;
+  }
+
   .logo {
     font-weight: 800;
     text-transform: uppercase;
@@ -45,7 +51,7 @@
 
 <section class="hero">
   <h1 class="logo">Fuse Fonts</h1>
-  <h2>Organize your fonts into simple collections within Adobe Photoshop.</h2>
+  <p class="description">Organize your fonts into simple collections within Adobe Photoshop</p>
   <nav class="hero-actions">
     <button class="btn-link btn-link--buy" on:click={buyClicked}>Buy</button>
     <button class="btn-link" on:click={learnMoreClicked}>Learn More</button>

@@ -21,6 +21,10 @@
     color: var(--accent-color);
   }
 
+  :global(.content-block) {
+    margin: 2em 0;
+  }
+
 </style>
 
 <Nav {segment} />

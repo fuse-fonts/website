@@ -15,9 +15,6 @@
 </script>
 
 <style>
-  .content-block {
-    margin: 2em 0;
-  }
 
   .help-defs {
     list-style: none;
