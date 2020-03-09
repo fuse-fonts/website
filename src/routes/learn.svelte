@@ -55,8 +55,7 @@
   <p class="content-block">
     Below, there are instructions and steps for using Fuse Fonts effectively.
     <br />
-    Note that Fuse Fonts aims to be simple to use and play around with. But, if
-    you ever need to learn or remember how to do something, check here first!
+    Note that Fuse Fonts aims to be simple to use. But, if you ever need to learn or remember how to do something, check here first!
   </p>
 
   <div class="two-columns">
