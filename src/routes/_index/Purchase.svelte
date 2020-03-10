@@ -1,7 +1,7 @@
 <script>
   import Container from "../../components/Container.svelte";
 
-  const price = "12";
+  const price = "16";
 
   const storeURL = {
     CREATIVE_MARKET: "",
@@ -30,7 +30,6 @@
   .price::before {
     content: "$";
     font-size: 0.5em;
-    margin-right: 0.25em;
     vertical-align: super;
   }
 
