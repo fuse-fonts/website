@@ -5,18 +5,9 @@
   import Container from "../components/Container.svelte";
 
 
-  let overviewEl = null;
-  let purchaseEl = null;
+  let overview = null;
+  let purchase = null;
 
-  function scrollElementIntoView(el) {
-    return () => {
-      if (el === null) return;
-      el.scrollIntoView({ behavior: "smooth" });
-    };
-  }
-
-  $: scrollOverviewIntoView = scrollElementIntoView(overviewEl);
-  $: scrollPurchaseIntoView = scrollElementIntoView(purchaseEl);
 </script>
 
 <svelte:head>
@@ -25,11 +16,11 @@
 
 <Container>
   <Hero
-    on:learn-more={scrollOverviewIntoView}
-    on:buy={scrollPurchaseIntoView} />
+    on:learn-more={() => overview.scrollIntoView()}
+    on:buy={() => purchase.scrollIntoView()} />
 </Container>
 
-<Overview />
+<Overview bind:this={overview} />
 
-<Purchase />
+<Purchase bind:this={purchase} />
 

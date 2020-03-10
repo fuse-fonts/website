@@ -1,13 +1,22 @@
 <script>
   import Container from "../../components/Container.svelte";
 
-  let overviewEl = null;
+  let el = null;
+
+  export const scrollIntoView = () => {
+    if (el === null) return;
+    el.scrollIntoView({ behavior: "smooth" });
+  };
+
 </script>
 
 <style>
   .overview {
     background-color: var(--secondary-background-color);
-    padding: 15vh 0;
+    min-height: 92vh;
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
   }
 
   @media (min-width: 56em) {
@@ -28,7 +37,7 @@
   }
 </style>
 
-<section class="overview" id="overview" bind:this={overviewEl}>
+<section class="overview" id="overview" bind:this={el}>
   <Container>
     <h2 class="h2">Overview</h2>
     <div class="two-columns">

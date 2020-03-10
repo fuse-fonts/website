@@ -30,7 +30,11 @@
   }
 
   .hero {
-    padding: 10vh 0;
+    min-height: 92vh;
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+    margin-top: -2em;
   }
 
   .hero nav {
@@ -44,7 +48,7 @@
     }
 
     .hero {
-      padding: 25vh 0 45vh 0;
+      /* padding: 25vh 0 45vh 0; */
     }
   }
 </style>

@@ -1,12 +1,52 @@
 <script>
   import Container from "../../components/Container.svelte";
-  let purchaseEl = null;
+
+  const price = "12";
+
+  const storeURL = {
+    CREATIVE_MARKET: "",
+    ADOBE_EXCHANGE: "",
+  };
+
+  const contactEmail = "hello@fusefonts.com";
+
+  let el = null;
+
+  export const scrollIntoView = () => {
+    if (el === null) return;
+    el.scrollIntoView({ behavior: "smooth" });
+  };
+
 </script>
 
 <style>
 
+  .price {
+    font-size: 3.6em;
+    line-height: 1.6em;
+    margin-bottom: 1rem;
+  }
+
+  .price::before {
+    content: "$";
+    font-size: 0.5em;
+    margin-right: 0.25em;
+    vertical-align: super;
+  }
+
+  .price::after {
+    content: "USD";
+    font-size: 0.25em;
+    margin-left: 0.5em;
+    line-height: 2em;
+    color: #666;
+  }
+
   .purchase {
-    padding: 15vh 0;
+    min-height: 92vh;
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
     background-color: #cacfcc;
     color: #333;
   }
@@ -24,8 +64,8 @@
     width: 100%;
     display: flex;
     flex-flow: column nowrap;
-    min-height: 20em;
     justify-content: space-between;
+    align-items: top;
   }
 
   .purchase .option footer {
@@ -42,15 +82,29 @@
   }
 
   .purchase .option ul {
-    width: 12em;
-    margin: 0 auto;
+    text-align: center;
+    list-style: none;
+    margin: 1em auto;
   }
 
   .option h3 {
     font-weight: 200;
     color: #000;
     font-size: 1.6em;
+    margin: 0 0;
   }
+
+  .other-options {
+    color: #666;
+    padding: 5vh 1em;
+    text-align: center;
+    margin: 0 0;
+  }
+
+  .other-options a {
+    color: #333;
+  }
+
 
   @media (min-width: 56em) {
     .purchase .option {
@@ -60,7 +114,7 @@
 </style>
 
 
-<section class="purchase" id="purchase" bind:this={purchaseEl}>
+<section class="purchase" id="purchase" bind:this={el}>
   <Container>
     <h2 class="h2">Purchase Fuse Fonts</h2>
 
@@ -71,12 +125,15 @@
         </header>
 
         <ul>
-          <li>Free Updates</li>
+          <li class="price">{price}</li>
+          <li>Individual License / Unlimited Devices</li>
+          <li>Full Features</li>
+          <li>Version 1.x Free Updates</li>
           <li>Email Support</li>
-          <li>Manually Updated</li>
+          <li>Update On Your Schedule</li>
         </ul>
         <footer>
-          <a href="" class="btn-link btn-link--buy">Buy on Creative Market</a>
+          <a href={storeURL.CREATIVE_MARKET} class="btn-link btn-link--buy">Buy on Creative Market</a>
         </footer>
       </div>
 
@@ -85,14 +142,21 @@
           <h3>Adobe Marketplace</h3>
         </header>
         <ul>
-          <li>Free Updates</li>
+          <li class="price">{price}</li>
+          <li>Individual License / 4 Devices</li>
+          <li>Full Features</li>
+          <li>Version 1.x Free Updates</li>
           <li>Email Support</li>
           <li>Automatically Updates</li>
         </ul>
         <footer>
-          <a href="https://exchange.adobe.com/creativecloud.html" target="_blank" class="btn-link btn-link--buy">Buy on Adobe Marketplace</a>
+          <a href={storeURL.ADOBE_EXCHANGE} target="_blank" class="btn-link btn-link--buy">Buy on Adobe Marketplace</a>
         </footer>
       </div>
     </div>
+
+    <p class="other-options">
+      For other licensing options, please inquire at <a href="mailto:{contactEmail}">{contactEmail}</a>.
+    </p>
   </Container>
 </section>
