@@ -55,7 +55,7 @@
   <nav class="hero-actions">
     <button class="btn-link btn-link--buy" on:click={buyClicked}>Buy</button>
     <button class="btn-link" on:click={learnMoreClicked}>Learn More</button>
-    <a class="btn-link" href="features/">Features</a>
+    <a class="btn-link" href="features">Features</a>
   </nav>
 </section>
 
