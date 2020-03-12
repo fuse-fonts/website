@@ -50,9 +50,9 @@
 
     <h2>Want to learn how to use these features?</h2>
     <p class="content-block">
-      <a href="learn" class="btn-link--buy">Buy Fuse Fonts</a>
+      <a href="/#purchase" class="btn-link--buy">Buy Fuse Fonts</a>
       <span class="spacer">and then</span>
-      <a href="learn" class="btn-link">Learn to use Fuse Fonts</a>
+      <a href="learn/" class="btn-link">Learn to use Fuse Fonts</a>
     </p>
   </div>
 </Container>

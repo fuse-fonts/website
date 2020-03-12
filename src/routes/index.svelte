@@ -4,7 +4,6 @@
   import Purchase from "./_index/Purchase.svelte";
   import Container from "../components/Container.svelte";
 
-
   let overview = null;
   let purchase = null;
 

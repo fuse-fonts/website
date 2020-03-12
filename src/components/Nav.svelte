@@ -96,12 +96,12 @@
       </a>
     </li>
     <li>
-      <a aria-current={segment === 'features' ? 'page' : undefined} href="features">
+      <a aria-current={segment === 'features' ? 'page' : undefined} href="features/">
         Features
       </a>
     </li>
     <li>
-      <a aria-current={segment === 'learn' ? 'page' : undefined} href="learn">
+      <a aria-current={segment === 'learn' ? 'page' : undefined} href="learn/">
         Learn
       </a>
     </li>
