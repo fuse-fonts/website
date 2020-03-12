@@ -28,6 +28,7 @@
 <style>
   main {
     padding-top: 2em;
+    min-height: 100vh;
   }
 
 
