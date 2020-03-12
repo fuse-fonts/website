@@ -1,8 +1,28 @@
 <script>
+  import {  beforeUpdate, onMount, setContext } from "svelte";
+
   import Nav from "../components/Nav.svelte";
   import Footer from "../components/Footer.svelte";
 
   export let segment;
+  let logPageView = () => {};
+  let logPurchaseOption = () => {};
+
+  beforeUpdate(() => {
+    logPageView(segment);
+  });
+
+  onMount(async () => {
+    const module = await import("../client/analytics.js");
+    logPageView = module.logPageView;
+    logPageView(segment); // initial pageview
+    logPurchaseOption = module.logPurchaseOption;
+
+  });
+
+  setContext("logPurchaseOption", () => logPurchaseOption);
+
+
 </script>
 
 <style>

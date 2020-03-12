@@ -1,11 +1,12 @@
 <script>
+  import { getContext } from "svelte";
   import Container from "../../components/Container.svelte";
 
-  const price = "16";
+  const price = "12";
 
   const storeURL = {
-    CREATIVE_MARKET: "",
-    ADOBE_EXCHANGE: "",
+    CREATIVE_MARKET: "https://creativemarket.com/",
+    ADOBE_EXCHANGE: "https://partners.adobe.com/exchangeprogram/creativecloud",
   };
 
   const contactEmail = "hello@fusefonts.com";
@@ -17,6 +18,17 @@
     el.scrollIntoView({ behavior: "smooth" });
   };
 
+const getLogPurchaseOption = getContext("logPurchaseOption");
+
+const storeLinkClicked = (e) => {
+
+  const linkClicked = e.currentTarget.href;
+  const item = Object.keys(storeURL).find(key => storeURL[key] === linkClicked);
+
+  if (!item || !linkClicked) return;
+  const logPurchaseOption = getLogPurchaseOption();
+  logPurchaseOption(item);
+};
 </script>
 
 <style>
@@ -132,7 +144,10 @@
           <li>Update On Your Schedule</li>
         </ul>
         <footer>
-          <a href={storeURL.CREATIVE_MARKET} class="btn-link btn-link--buy">Buy on Creative Market</a>
+          <a href={storeURL.CREATIVE_MARKET}
+             on:click={storeLinkClicked}
+             target="_blank"
+             class="btn-link btn-link--buy">Buy on Creative Market</a>
         </footer>
       </div>
 
@@ -149,7 +164,10 @@
           <li>Automatically Updates</li>
         </ul>
         <footer>
-          <a href={storeURL.ADOBE_EXCHANGE} target="_blank" class="btn-link btn-link--buy">Buy on Adobe Marketplace</a>
+          <a href={storeURL.ADOBE_EXCHANGE}
+             on:click={storeLinkClicked}
+             target="_blank"
+             class="btn-link btn-link--buy">Buy on Adobe Marketplace</a>
         </footer>
       </div>
     </div>

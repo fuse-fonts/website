@@ -46,10 +46,6 @@
     h1 {
       font-size: 3.6em;
     }
-
-    .hero {
-      /* padding: 25vh 0 45vh 0; */
-    }
   }
 </style>
 
