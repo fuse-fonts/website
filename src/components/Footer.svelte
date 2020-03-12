@@ -1,8 +1,8 @@
 <script>
   import Container from "./Container.svelte";
+  import { sendGridSignupURL } from "../routes/_config.js";
 
-  const newsletterSignupLink =
-    "https://cdn.forms-content.sg-form.com/1e965d7f-62a1-11ea-b917-aa5a30c70ab5";
+    ;
 </script>
 
 <style>
@@ -17,7 +17,7 @@
 <footer>
   <Container>
     <nav>
-      <a href={newsletterSignupLink} target="_blank">
+      <a href={sendGridSignupURL} target="_blank">
         Subscribe to Fuse Fonts updates
       </a>
     </nav>
