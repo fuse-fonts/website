@@ -1,6 +1,7 @@
 <script>
   import { getContext } from "svelte";
   import Container from "../../components/Container.svelte";
+  import { contactEmailAddress } from "../_config.js";
 
   const price = "12";
 
@@ -8,8 +9,6 @@
     CREATIVE_MARKET: "https://creativemarket.com/",
     ADOBE_EXCHANGE: "https://partners.adobe.com/exchangeprogram/creativecloud",
   };
-
-  const contactEmail = "hello@fusefonts.com";
 
   let el = null;
 
@@ -173,7 +172,7 @@ const storeLinkClicked = (e) => {
     </div>
 
     <p class="other-options">
-      For other licensing options, please inquire at <a href="mailto:{contactEmail}">{contactEmail}</a>.
+      For other licensing options, please inquire at <a href="mailto:{contactEmailAddress}">{contactEmailAddress}</a>.
     </p>
   </Container>
 </section>

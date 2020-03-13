@@ -17,6 +17,15 @@
         "**/.*",
         "**/node_modules/**"
       ]
+    },
+    {
+      "target": "demo",
+      "public": "plugin/public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ]
     }
   ]
 }

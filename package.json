@@ -14,7 +14,9 @@
     "deploy": "echo \"You must choose a deploy target\"",
     "deploy:staging": "firebase deploy --only hosting:staging",
     "deploy:production": "firebase deploy --only hosting:production",
-    "deploy:demo": "firebase deploy --only hosting:demo"
+    "deploy:demo": "firebase deploy --only hosting:demo",
+    "build:demo": "cd plugin && npm run build:webapp",
+    "init:demo": "cd plugin && npm i"
   },
   "dependencies": {
     "compression": "^1.7.1",

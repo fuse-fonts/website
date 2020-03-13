@@ -1,25 +1,71 @@
 <script>
   import Container from "./Container.svelte";
-  import { sendGridSignupURL } from "../routes/_config.js";
+  import {
+    sendGridSignupURL,
+    contactEmailAddress,
+    supportEmailAddress
+  } from "../routes/_config.js";
 
-    ;
+  import Logo from "./Logo.svelte";
 </script>
 
 <style>
   footer {
     background-color: #111;
-    padding: 4rem 0;
-
+    padding: 4rem 2em;
     font-size: 0.8em;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .muted {
+    color: #888;
+  }
+
+  h4 {
+    font-weight: 600;
+    margin-bottom: 1em;
+  }
+
+  .logo-container {
+    margin-top: 1em;
+    text-align: center;
   }
 </style>
 
 <footer>
-  <Container>
+
     <nav>
-      <a href={sendGridSignupURL} target="_blank">
-        Subscribe to Fuse Fonts updates
-      </a>
+      <div>
+        <h4>News</h4>
+        <p>
+          <a href={sendGridSignupURL} target="_blank">Email Updates</a>
+          <br />
+          <span class="muted">
+            Subscribe to Fuse Fonts product updates and special offers
+          </span>
+        </p>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <p>
+          <a href={`mailto:${contactEmailAddress}`} target="_blank">
+            {contactEmailAddress}
+          </a>
+          <br />
+          <a href={`mailto:${supportEmailAddress}`} target="_blank">
+            {supportEmailAddress}
+          </a>
+        </p>
+      </div>
+
     </nav>
-  </Container>
+    <div class="logo-container">
+      <Logo />
+    </div>
+
 </footer>
