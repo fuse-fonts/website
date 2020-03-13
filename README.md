@@ -16,16 +16,6 @@ This is the Fuse Fonts website built using Firebase, Sapper, and Svelte.
 npm install
 ```
 
-If you want to deploy the fusefonts demo, you will need to clone the  [Fuse Fonts Plugin](https://github.com/fuse-fonts/plugin) submodule:
-
-```
-git submodule init
-git sobmodule update
-```
-
-Learn more about [git submodules here](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
-
-
 ### Development
 
 Refer to sapper docs.
@@ -42,3 +32,38 @@ This site utilizes _refererURLs_, so Firebase Analytics scripts don't load when 
 With firebase, you will need multiple hosting targets to map the deployment commands in [`package.json`](package.json).
 
 The three targets consist of: `production`, `staging`, and `demo`. The item needing most explaining is `demo`: it is a production hosting target which contains the fuse fonts demo.
+
+
+#### Deploying `demo` target
+
+
+1.  If you want to deploy the fusefonts demo, you will need to clone the  [Fuse Fonts Plugin](https://github.com/fuse-fonts/plugin) submodule first:
+
+  ```
+  git submodule init
+  git sobmodule update
+  ```
+
+  Learn more about [git submodules here](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
+
+2.  Install the Fuse Font plugin dependencies
+
+  ```
+  npm run init:demo
+  ```
+
+3.  Build and Deploy
+
+  You can work within the plugin folder, if you so wish, and utilize those `npm` commands.
+  But to perform a build from `@fusefonts/website`, run:
+  ```
+  npm run build:demo
+  ```
+  and when you're ready to deploy:
+
+  ```
+  npm run deploy:demo
+  ```
+
+
+
