@@ -1,3 +1,14 @@
+<script>
+  import { createEventDispatcher } from 'svelte';
+
+  const dispatch = createEventDispatcher();
+
+  const buyClicked = () => dispatch("buy");
+  const learnMoreClicked = () => dispatch("learn-more");
+
+</script>
+
+
 <style>
   h1 {
     font-size: 2.8em;
@@ -58,13 +69,3 @@
     <a class="btn-link" href="features">Features</a>
   </nav>
 </section>
-
-<script>
-  import { createEventDispatcher } from 'svelte';
-
-  const dispatch = createEventDispatcher();
-
-  const buyClicked = () => dispatch("buy");
-  const learnMoreClicked = () => dispatch("learn-more");
-
-</script>
