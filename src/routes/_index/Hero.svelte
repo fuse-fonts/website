@@ -6,6 +6,7 @@
   const buyClicked = () => dispatch("buy");
   const learnMoreClicked = () => dispatch("learn-more");
 
+
 </script>
 
 

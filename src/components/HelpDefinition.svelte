@@ -1,6 +1,7 @@
 <script>
 
   import { slide } from 'svelte/transition';
+  import Chevron from "./Chevron.svelte";
 
 
   export let collapsed = true;
@@ -31,10 +32,6 @@
     transition: 0.1s ease-in transform;
   }
 
-  .toggle-icon path {
-    fill: #eee;
-  }
-
   .toggle-icon.open {
     transform: rotate(-90deg);
   }
@@ -49,7 +46,9 @@
 
 <h3 class="toggle-point" on:click={toggleCollapse} {id}>
   {title}
-  <svg class="toggle-icon" class:open={!collapsed} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="6 6 24 24"><path d="M23.12 11.12L21 9l-9 9 9 9 2.12-2.12L16.24 18z"/></svg>
+  <div class="toggle-icon" class:open={!collapsed}>
+    <Chevron />
+  </div>
 </h3>
 
 {#if !collapsed}

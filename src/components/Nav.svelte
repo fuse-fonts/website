@@ -1,10 +1,10 @@
 <script>
+  import { demoURL } from "../routes/_config.js";
+  import Chevron from "./Chevron.svelte";
   export let segment;
-
 </script>
 
 <style>
-
   header {
     display: block;
     width: 100%;
@@ -27,6 +27,26 @@
     margin: 0 0.5em;
   }
 
+  .try-demo {
+    display: none;
+    position: fixed;
+    right: 1.5em;
+    top: 4.5em;
+    float: right;
+  }
+
+
+  .try-demo .icon {
+    display: inline-block;
+    transform: translateX(0);
+    transition: 0.1s ease-in transform;
+    transition-delay: 0.1s;
+  }
+  .try-demo:hover .icon {
+    transform: translateX(0.25em);
+    transition-delay: 0s;
+  }
+
   [aria-current] {
     position: relative;
     display: inline-block;
@@ -42,7 +62,7 @@
     bottom: -1px;
   }
 
-  a {
+  header a {
     color: var(--text-color);
     text-decoration: none;
     padding: 1em 0.5em;
@@ -82,6 +102,12 @@
       z-index: 2;
     }
   }
+
+  @media (min-width: 72em) {
+    .try-demo {
+      display: block;
+    }
+  }
 </style>
 
 <header>
@@ -89,23 +115,33 @@
     <a class="logo" href=".">Fuse Fonts</a>
   </div>
   <nav>
-  <ul>
-    <li>
-      <a aria-current={segment === undefined ? 'page' : undefined} href=".">
-        Home
-      </a>
-    </li>
-    <li>
-      <a aria-current={segment === 'features' ? 'page' : undefined} href="features">
-        Features
-      </a>
-    </li>
-    <li>
-      <a aria-current={segment === 'learn' ? 'page' : undefined} href="learn">
-        Learn
-      </a>
-    </li>
-  </ul>
-</nav>
-
+    <ul>
+      <li>
+        <a aria-current={segment === undefined ? 'page' : undefined} href=".">
+          Home
+        </a>
+      </li>
+      <li>
+        <a
+          aria-current={segment === 'features' ? 'page' : undefined}
+          href="features">
+          Features
+        </a>
+      </li>
+      <li>
+        <a aria-current={segment === 'learn' ? 'page' : undefined} href="learn">
+          Learn
+        </a>
+      </li>
+    </ul>
+  </nav>
 </header>
+
+<aside class="try-demo">
+  <a target="_blank" class="btn-link btn-link--buy" href={demoURL}>
+    Try Web Demo
+    <span class="icon">
+      <Chevron color="#000" direction="right" width="12" height="12" />
+    </span>
+  </a>
+</aside>
