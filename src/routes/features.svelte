@@ -9,7 +9,7 @@
 
   .spacer {
     display: inline-block;
-    margin: 0 1em;
+    margin: 1em 1em;
   }
 </style>
 
