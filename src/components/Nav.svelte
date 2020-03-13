@@ -1,6 +1,7 @@
 <script>
   import { demoURL } from "../routes/_config.js";
   import Chevron from "./Chevron.svelte";
+  import Logo from "./Logo.svelte";
   export let segment;
 </script>
 
@@ -70,29 +71,19 @@
     text-transform: lowercase;
   }
 
-  .logo {
-    font-weight: 800;
-    text-transform: uppercase;
+  .logo-container {
     width: 100%;
     text-align: center;
     margin-left: -1rem;
-  }
-
-  .logo::before {
-    content: "";
-    display: inline-block;
-    width: 0.8em;
-    height: 0.8em;
-    margin-right: 0.5em;
-    background-color: var(--accent-color);
-    border-radius: 2px;
+    padding: 1.5em 0;
   }
 
   @media (min-width: 36em) {
-    .logo {
+    .logo-container {
       text-align: left;
       width: auto;
-      margin: 0 1rem 0 0;
+      padding: 0 0;
+      margin: auto 1rem;
     }
 
     header {
@@ -112,7 +103,7 @@
 
 <header>
   <div class="logo-container">
-    <a class="logo" href=".">Fuse Fonts</a>
+    <Logo />
   </div>
   <nav>
     <ul>
