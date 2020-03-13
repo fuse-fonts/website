@@ -41,7 +41,7 @@ The three targets consist of: `production`, `staging`, and `demo`. The item need
 
   ```
   git submodule init
-  git sobmodule update
+  git submodule update
   ```
 
   Learn more about [git submodules here](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
