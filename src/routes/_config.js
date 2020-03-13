@@ -1,3 +1,5 @@
+export const contactEmailAddress = "hello@fusefonts.com";
+export const supportEmailAddress = "support@fusefonts.com";
 
 export const demoURL = "https://demo.fusefonts.com";
 
