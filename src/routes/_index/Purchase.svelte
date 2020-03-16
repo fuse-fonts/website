@@ -59,6 +59,8 @@ const storeLinkClicked = (e) => {
     flex-flow: column nowrap;
     background-color: #cacfcc;
     color: #333;
+    margin-bottom: -2em;
+    padding-bottom: 2em;
   }
 
   .purchase-options {

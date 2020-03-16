@@ -27,7 +27,7 @@
 
 <style>
   main {
-    padding-top: 2em;
+    padding: 2em 0;
     min-height: 100vh;
   }
 
