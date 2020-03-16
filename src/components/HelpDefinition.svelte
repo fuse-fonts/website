@@ -54,5 +54,6 @@
 {#if !collapsed}
   <div class="help-text" transition:slide={{ duration: 200 }}>
     <slot />
+    <slot name="video" />
   </div>
 {/if}
