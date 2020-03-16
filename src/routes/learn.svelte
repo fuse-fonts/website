@@ -1,7 +1,11 @@
 <script>
+  
   import Container from "../components/Container.svelte";
   import HelpDefinition from "../components/HelpDefinition.svelte";
+  import InstructionVideo from "../components/InstructionVideo.svelte";
+
   import instructions from "./_learn.js";
+  import { cdnURL } from "./_config.js";
 
   let collapsed = true;
 
@@ -74,6 +78,12 @@
                 {@html paragraph}
               </p>
             {/each}
+
+            <div slot="video">
+              {#if instruction.video}
+                <InstructionVideo url={`${cdnURL}/learn/${instruction.video}`} title={`Watch how to ${instruction.title}`} />
+              {/if}
+            </div>
           </HelpDefinition>
         </li>
       {/each}
