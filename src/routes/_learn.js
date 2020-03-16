@@ -53,7 +53,7 @@ export default [
   {
     title: "Apply Font to a Text Layer",
     paragraphs: [
-      `To apply a Selected font to a text layer the "Apply-Apply to Text Layer" checkbox must be selected.This checkbox can be changed by either selecting a font or opening the Settings.`,
+      `To apply a Selected font to a text layer the "Apply-Apply to Text Layer" checkbox must be selected. This checkbox can be changed by either selecting a font or opening the Settings.`,
       `When checked, selecting or deselecting any font will apply that font to the currently selected text layer in Photoshop's Layers panel.`
     ]
   },
@@ -73,7 +73,7 @@ export default [
     title: "Clear User Data",
     paragraphs: [
       `To clear User Data click the "Reset User Settings" button within Fuse Fonts' Settings.`,
-      `Note: Fuse Fonts doesn't store any specific user data. We don't support companies and products harvesting your data.The user data stored is the interface options that have been chosen so that they persist across Photoshop sessions.`,
+      `Note: Fuse Fonts doesn't store any specific user data. We don't support companies and products harvesting your data. The user data stored is the interface options that have been chosen so that they persist across Photoshop sessions.`,
       `Fuse Fonts is Open-Source; Thus, anyone can audit it's data storage methods <a rel="nofollow" href="https://github.com/fuse-fonts/plugin/blob/0854df023af8baa05918f9107bb52097add597c1/src/plugin/stores/user-settings.js#L5-L1>here</a>`
     ]
   },
