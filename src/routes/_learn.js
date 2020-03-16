@@ -1,5 +1,11 @@
 export default [
   {
+    title: "Enable Fuse Fonts",
+    paragraphs: [
+      `To enable Fuse Fonts, first make sure you've restarted Photoshop after installing. Then in the title bar, go to <code>Window > Extensions > Fuse Fonts</code>.`]
+  },
+
+  {
     title: "Create a Group",
     paragraphs: [
       `To create a group, click the "folder" icon on the left of the groups pane. The new group can be immediately named.`,
@@ -51,6 +57,10 @@ export default [
     paragraphs: [`To Change the Groups pane view, click the middle icons to toggle between viewing groups as a List, or as Grid. Grid view looks much better when Fuse Fonts is it's own floating panel outside Photoshop and has lots of space.`]
   },
   {
+    title: "Open Settings",
+    paragraphs: [`To open Fuse Fonts' Settings, click the "cog" icon to the lower left of the groups pane.`]
+  },
+  {
     title: "Apply Font to a Text Layer",
     paragraphs: [
       `To apply a Selected font to a text layer the "Apply-Apply to Text Layer" checkbox must be selected. This checkbox can be changed by either selecting a font or opening the Settings.`,
@@ -66,15 +76,11 @@ export default [
     ]
   },
   {
-    title: "Open Settings",
-    paragraphs: [`To open Fuse Fonts' Settings, click the "cog" icon to the lower left of the groups pane.`]
-  },
-  {
-    title: "Clear User Data",
+    title: "Clear User Settings",
     paragraphs: [
-      `To clear User Data click the "Reset User Settings" button within Fuse Fonts' Settings.`,
+      `To clear User Settings. click the "Reset User Settings" button within Fuse Fonts' Settings.`,
       `Note: Fuse Fonts doesn't store any specific user data. We don't support companies and products harvesting your data. The user data stored is the interface options that have been chosen so that they persist across Photoshop sessions.`,
-      `Fuse Fonts is Open-Source; Thus, anyone can audit it's data storage methods <a rel="nofollow" href="https://github.com/fuse-fonts/plugin/blob/0854df023af8baa05918f9107bb52097add597c1/src/plugin/stores/user-settings.js#L5-L1>here</a>`
+      `Fuse Fonts is Open-Source; Thus, anyone can audit it's data storage methods <a rel="nofollow" href="https://github.com/fuse-fonts/plugin/blob/0854df023af8baa05918f9107bb52097add597c1/src/plugin/stores/user-settings.js#L5-L1">on GitHub</a>.`
     ]
   },
   {
