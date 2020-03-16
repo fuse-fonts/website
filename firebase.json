@@ -26,6 +26,22 @@
         "**/.*",
         "**/node_modules/**"
       ]
+    },
+    {
+      "target": "cdn",
+      "public": "cdn",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "redirects": [
+        {
+          "source": "*",
+          "destination": "https://fusefonts.com",
+          "type": 301
+        }
+      ]
     }
   ]
 }
