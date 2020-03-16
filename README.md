@@ -25,13 +25,28 @@ To perform local development:
 npm run dev
 ```
 
-This site utilizes _refererURLs_, so Firebase Analytics scripts don't load when performaing local dev. See `[src/client/analytics.js](src/client/analytics.js) for details. Enable the `debug` flag to log to the events to the console.
+This site utilizes _refererURLs_, so Firebase Analytics scripts don't load when performaing local dev. See `[src/client/analytics.js](src/client/analytics.js)` for details. Enable the `debug` flag to log to the events to the console.
 
 ### Deployment
 
+You'll need firebase:
+
+```
+npm i -g firebase-tools@latest
+```
+
+
 With firebase, you will need multiple hosting targets to map the deployment commands in [`package.json`](package.json).
 
-The three targets consist of: `production`, `staging`, and `demo`. The item needing most explaining is `demo`: it is a production hosting target which contains the fuse fonts demo.
+The three targets consist of: `production`, `cdn`, `staging`, and `demo`. The item needing most explaining is `demo`: it is a production hosting target which contains the fuse fonts demo.
+
+Run this to add a hosting target—replacing `[resource]` with your firebase hosting resource name. [Learn More](https://firebase.google.com/docs/hosting/multisites)
+```
+firebase target:apply hosting production [resource]
+firebase target:apply hosting cdn [resource]
+firebase target:apply hosting staging [resource]
+firebase target:apply hosting demo [resource]
+```
 
 
 #### Deploying `demo` target
