@@ -41,6 +41,18 @@
           "destination": "https://fusefonts.com",
           "type": 301
         }
+      ],
+      "headers": [
+        {
+          // Specifies a CORS header for all font files
+          "source": "**/*.@(mp4)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "only-if-cached"
+            }
+          ]
+        }
       ]
     }
   ]
