@@ -47,7 +47,7 @@
         </h3>
         <p>
           Fuse Fonts is an Adobe Photoshop panel, meaning it’s integrated into
-          Photoshop. Install it, enable the panel in Photoshop, then and start
+          Photoshop. Install it, enable the panel in Photoshop, then start
           organizing your fonts.
         </p>
       </div>
