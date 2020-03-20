@@ -1,12 +1,9 @@
 // Analytics utilizes the segment node of sapper to watch for page changes
 
 let previousEvent = null;
-const hasAnalytics = window.firebase && window.firebase.analytics;
+let hasAnalytics = false;
 const isDebug = false;
 let analytics = null;
-if (hasAnalytics) {
-  analytics = firebase.analytics();
-}
 
 const logEvent = (eventName, ...params) => {
   if (isDebug) {
@@ -15,6 +12,26 @@ const logEvent = (eventName, ...params) => {
   if (hasAnalytics) {
     analytics.logEvent(eventName, ...params);
   }
+}
+
+export const loadFirebase = async () => {
+
+  if (window.location.hostname !== "localhost") {
+    const firebaseApp = import("/__/firebase/7.10.0/firebase-app.js");
+    const firebaseAnalytics = import("/__/firebase/7.10.0/firebase-analytics.js");
+    const firebaseInit = import("/__/firebase/init.js");
+  
+    await Promise.all([firebaseApp, firebaseAnalytics, firebaseInit])
+      .then(r => analytics = window.firebase.analytics())
+      .catch( err => console.error(err));
+  }
+  else {
+    console.log("Skipping firebase analytics");
+  }
+
+  hasAnalytics = analytics !== null;
+
+  return hasAnalytics;
 }
 
 export const logPageView = (segment) => {

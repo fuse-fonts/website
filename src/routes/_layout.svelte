@@ -14,6 +14,9 @@
 
   onMount(async () => {
     const module = await import("../client/analytics.js");
+
+    await module.loadFirebase();
+
     logPageView = module.logPageView;
     logPageView(segment); // initial pageview
     logPurchaseOption = module.logPurchaseOption;
