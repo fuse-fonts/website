@@ -3,14 +3,23 @@
   import Overview from "./_index/Overview.svelte";
   import Purchase from "./_index/Purchase.svelte";
   import Container from "../components/Container.svelte";
+  import OpenGraphMetaTags from "../components/OpenGraphMetaTags.svelte";
+  
+
+  import { productDescription, productionURL } from "./_config.js";
 
   let overview = null;
   let purchase = null;
-
 </script>
 
 <svelte:head>
   <title>Fuse Fonts</title>
+  <meta name="description" content={productDescription} />
+  <meta name="keywords" content="Fuse Fonts, Photoshop Plugin, font management, font plugin" />
+  <meta name="url" content={productionURL} />
+  <link rel="canonical" href={productionURL} />
+  <OpenGraphMetaTags />
+
 </svelte:head>
 
 <Container>
@@ -22,4 +31,3 @@
 <Overview bind:this={overview} />
 
 <Purchase bind:this={purchase} />
-

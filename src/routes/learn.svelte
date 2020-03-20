@@ -3,10 +3,12 @@
   import Container from "../components/Container.svelte";
   import HelpDefinition from "../components/HelpDefinition.svelte";
   import InstructionVideo from "../components/InstructionVideo.svelte";
+  import OpenGraphMetaTags from "../components/OpenGraphMetaTags.svelte";
 
   import instructions from "./_learn.js";
-  import { cdnURL } from "./_config.js";
+  import { cdnURL, productionURL } from "./_config.js";
 
+  const metaURL = `${productionURL}/learn`;
   let collapsed = true;
 
   function expandAll() {
@@ -49,6 +51,10 @@
 
 <svelte:head>
   <title>Learn</title>
+  <meta name="description" content="Learn how to use Fuse Fonts" />
+  <meta name="url" content={metaURL} />
+  <link rel="canonical" href={metaURL} />
+  <OpenGraphMetaTags />
 </svelte:head>
 
 <Container>

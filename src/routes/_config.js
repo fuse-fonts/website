@@ -5,3 +5,7 @@ export const demoURL = "https://demo.fusefonts.com";
 export const cdnURL = "https://cdn.fusefonts.com";
 
 export const sendGridSignupURL = "https://cdn.forms-content.sg-form.com/1e965d7f-62a1-11ea-b917-aa5a30c70ab5";
+
+export const productDescription = "Organize your fonts into simple collections within Adobe Photoshop";
+export const productionURL = "https://fusefonts.com";
+export const logoURL = "https://cdn.fusefonts.com/meta/fuse-fonts-logo.png";

@@ -1,5 +1,9 @@
 <script>
   import Container from "../components/Container.svelte";
+  import OpenGraphMetaTags from "../components/OpenGraphMetaTags.svelte";
+  import { productionURL } from "./_config.js";
+  const metaURL = `${productionURL}/features`;
+
 </script>
 
 <style>
@@ -15,6 +19,10 @@
 
 <svelte:head>
   <title>Features</title>
+  <meta name="description" content="Features of Fuse Fonts" />
+  <meta name="url" content={metaURL} />
+  <link rel="canonical" href={metaURL} />
+  <OpenGraphMetaTags />
 </svelte:head>
 
 <Container>
