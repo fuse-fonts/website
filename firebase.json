@@ -44,7 +44,6 @@
       ],
       "headers": [
         {
-          // Specifies a CORS header for all font files
           "source": "**/*.@(mp4)",
           "headers": [
             {
