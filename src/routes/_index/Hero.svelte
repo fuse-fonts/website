@@ -49,9 +49,13 @@
     margin-top: -2em;
   }
 
-  .hero nav {
+  .hero-actions {
     padding-top: 1em;
     margin-top: 1em;
+  }
+
+  .hero-actions .btn-link {
+    margin: 0 0.5em 1em 0;
   }
 
   @media (min-width: 56em) {
