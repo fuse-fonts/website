@@ -1,8 +1,8 @@
 <script>
   import { createEventDispatcher } from 'svelte';
+  import  { productDescription } from "../_config";
 
   const dispatch = createEventDispatcher();
-
   const buyClicked = () => dispatch("buy");
   const learnMoreClicked = () => dispatch("learn-more");
 
@@ -49,9 +49,13 @@
     margin-top: -2em;
   }
 
-  .hero nav {
+  .hero-actions {
     padding-top: 1em;
     margin-top: 1em;
+  }
+
+  .hero-actions .btn-link {
+    margin: 0 0.5em 1em 0;
   }
 
   @media (min-width: 56em) {
@@ -63,7 +67,7 @@
 
 <section class="hero">
   <h1 class="logo">Fuse Fonts</h1>
-  <p class="description">Organize your fonts into simple collections within Adobe Photoshop</p>
+  <p class="description">{productDescription}</p>
   <nav class="hero-actions">
     <button class="btn-link btn-link--buy" on:click={buyClicked}>Buy</button>
     <button class="btn-link" on:click={learnMoreClicked}>Learn More</button>

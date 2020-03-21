@@ -1,9 +1,7 @@
 <script>
   import { getContext } from "svelte";
   import Container from "../../components/Container.svelte";
-  import { contactEmailAddress } from "../_config.js";
-
-  const price = "12";
+  import { contactEmailAddress, creativeMarketPrice, adobeExchangePrice  } from "../_config.js";
 
   const storeURL = {
     CREATIVE_MARKET: "https://creativemarket.com/",
@@ -137,7 +135,7 @@ const storeLinkClicked = (e) => {
         </header>
 
         <ul>
-          <li class="price">{price}</li>
+          <li class="price">{creativeMarketPrice}</li>
           <li>Individual License / Unlimited Devices</li>
           <li>Full Features</li>
           <li>Version 1.x Free Updates</li>
@@ -157,7 +155,7 @@ const storeLinkClicked = (e) => {
           <h3>Adobe Marketplace</h3>
         </header>
         <ul>
-          <li class="price">{price}</li>
+          <li class="price">{adobeExchangePrice}</li>
           <li>Individual License / 4 Devices</li>
           <li>Full Features</li>
           <li>Version 1.x Free Updates</li>
