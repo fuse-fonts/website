@@ -86,6 +86,17 @@ code {
   transform: scale(1);
 }
 
+button[disabled],
+button[disabled]:hover,
+.disabled,
+.disabled:hover {
+  opacity: 1;
+  background: #cacfcc;
+  border: 1px solid #aaa;
+  color: #888;
+  cursor: not-allowed;
+}
+
 .btn-link:active {
   transform: scale(0.98);
 }

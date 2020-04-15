@@ -129,26 +129,6 @@ const storeLinkClicked = (e) => {
     <h2 class="h2">Purchase Fuse Fonts</h2>
 
     <div class="purchase-options">
-      <div class="option">
-        <header>
-          <h3>Creative Market</h3>
-        </header>
-
-        <ul>
-          <li class="price">{creativeMarketPrice}</li>
-          <li>Individual License / Unlimited Devices</li>
-          <li>Full Features</li>
-          <li>Version 1.x Free Updates</li>
-          <li>Email Support</li>
-          <li>Update On Your Schedule</li>
-        </ul>
-        <footer>
-          <a href={storeURL.CREATIVE_MARKET}
-             on:click={storeLinkClicked}
-             target="_blank"
-             class="btn-link btn-link--buy">Buy on Creative Market</a>
-        </footer>
-      </div>
 
       <div class="option">
         <header>
@@ -167,6 +147,28 @@ const storeLinkClicked = (e) => {
              on:click={storeLinkClicked}
              target="_blank"
              class="btn-link btn-link--buy">Buy on Adobe Marketplace</a>
+        </footer>
+      </div>
+
+      <div class="option">
+        <header>
+          <h3>Creative Market</h3>
+        </header>
+
+        <ul>
+          <li class="price">{creativeMarketPrice}</li>
+          <li>Individual License / Unlimited Devices</li>
+          <li>Full Features</li>
+          <li>Version 1.x Free Updates</li>
+          <li>Email Support</li>
+          <li>Update On Your Schedule</li>
+        </ul>
+        <footer>
+          <button
+             disabled="disabled"
+             on:click={storeLinkClicked}
+             target="_blank"
+             class="btn-link btn-link--buy">Coming Soon</button>
         </footer>
       </div>
     </div>
