@@ -1,11 +1,11 @@
 <script>
   import { getContext } from "svelte";
   import Container from "../../components/Container.svelte";
-  import { contactEmailAddress, creativeMarketPrice, adobeExchangePrice  } from "../_config.js";
+  import { contactEmailAddress, creativeMarketPrice, adobeExchangePrice, sendGridSignupURL  } from "../_config.js";
 
   const storeURL = {
     CREATIVE_MARKET: "https://creativemarket.com/",
-    ADOBE_EXCHANGE: "https://partners.adobe.com/exchangeprogram/creativecloud",
+    ADOBE_EXCHANGE: "https://exchange.adobe.com/creativecloud.details.102714.fuse-fonts.html",
   };
 
   let el = null;
@@ -115,6 +115,10 @@ const storeLinkClicked = (e) => {
     color: #333;
   }
 
+  .temp-long-msg {
+    padding: 2em 2em 0em 2em;
+  }
+
 
   @media (min-width: 56em) {
     .purchase .option {
@@ -156,19 +160,23 @@ const storeLinkClicked = (e) => {
         </header>
 
         <ul>
-          <li class="price">{creativeMarketPrice}</li>
+
+          <li>
+            <button class="btn-link btn-link--buy" disabled>Coming Soon</button>
+          </li>
+          <li class="temp-long-msg">Subscribe to email updates to get notifed when Fuse Fonts is available on Creative Market</li>
+          <!-- <li class="price">{creativeMarketPrice}</li>
           <li>Individual License / Unlimited Devices</li>
           <li>Full Features</li>
           <li>Version 1.x Free Updates</li>
           <li>Email Support</li>
-          <li>Update On Your Schedule</li>
+          <li>Update On Your Schedule</li> -->
         </ul>
         <footer>
-          <button
-             disabled="disabled"
+          <a href={sendGridSignupURL}
              on:click={storeLinkClicked}
              target="_blank"
-             class="btn-link btn-link--buy">Coming Soon</button>
+             class="btn-link btn-link--buy">Subscribe to updates</a>
         </footer>
       </div>
     </div>
