@@ -5,7 +5,7 @@
 
   const storeURL = {
     CREATIVE_MARKET: "https://creativemarket.com/",
-    ADOBE_EXCHANGE: "https://exchange.adobe.com/creativecloud.details.102714.fuse-fonts.html",
+    ADOBE_EXCHANGE: "https://exchange.adobe.com/creativecloud.details.102714.html",
   };
 
   let el = null;
