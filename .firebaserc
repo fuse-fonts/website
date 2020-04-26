@@ -1,0 +1,20 @@
+{
+  "targets": {
+    "fuse-fonts": {
+      "hosting": {
+        "staging": [
+          "fusefonts-staging"
+        ],
+        "production": [
+          "fuse-fonts"
+        ],
+        "demo": [
+          "fusefonts-demo"
+        ],
+        "cdn": [
+          "fuse-fonts-cdn"
+        ]
+      }
+    }
+  }
+}
