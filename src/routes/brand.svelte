@@ -9,10 +9,15 @@
     outline: 1px solid #bbb;
   }
 </style>
-<Container>
-  <h1>Fuse Fonts Brand</h1>
-  <h2>Assets</h2>
 
+<svelte:head>
+  <title>Brand & Assets</title>
+</svelte:head>
+
+<Container>
+  <h1>Brand & Assets</h1>
+  <p>Below are Fuse Fonts' Brand Assets. They're CDN hosted so feel free to link them directly.</p>
+  
   <h4>Fuse Fonts Logo</h4>
   <p>
     <a href={logoURL} target="_blank">
