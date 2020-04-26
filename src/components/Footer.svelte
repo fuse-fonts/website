@@ -6,7 +6,7 @@
     supportEmailAddress,
     facebookURL,
     instagramURL,
-    githubURL,
+    githubURL
   } from "../routes/_config.js";
 
   import Logo from "./Logo.svelte";
@@ -19,17 +19,25 @@
     font-size: 0.8em;
   }
 
-  nav {
-    display: flex;
-    justify-content: space-evenly;
+  @media (min-width: 40em) {
+    nav {
+      display: flex;
+      flex: 1 0 auto;
+    }
+  }
+
+  .col {
+    padding: 1em 1em;
+    margin: 0 auto;
   }
 
   .muted {
     color: #888;
+    font-size: 0.8em;
   }
 
-  .link-item {
-    display: block;
+  .footer-links {
+    list-style: none;
   }
 
   h4 {
@@ -52,34 +60,47 @@
 <footer>
 
   <nav>
-    <div>
+    <div class="col">
       <h4>News</h4>
-      <p>
-        <a class="link-item" href={sendGridSignupURL} target="_blank">Email Updates</a>
-        <span class="muted">
-          Subscribe to Fuse Fonts product updates and special offers
-        </span>
-      </p>
+      <ul class="footer-links">
+        <li>
+          <a href={sendGridSignupURL} target="_blank">Email Updates</a>
+        </li>
+        <li>
+          <a href="brand">Brand & Assets</a>
+        </li>
+      </ul>
+
     </div>
 
-    <div>
+    <div class="col">
       <h4>Contact</h4>
-      <p>
-        <a class="link-item" href={`mailto:${contactEmailAddress}`} target="_blank" rel="noopener">
-          {contactEmailAddress}
-        </a>
-        <a class="link-item" href={`mailto:${supportEmailAddress}`} target="_blank" rel="noopener">
-          {supportEmailAddress}
-        </a>
-      </p>
+      <ul class="footer-links">
+        <li>
+          <a href={`mailto:`} target="_blank" rel="noopener">
+            {contactEmailAddress}
+          </a>
+        </li>
+        <li>
+          <a href={`mailto:`} target="_blank" rel="noopener">
+            {supportEmailAddress}
+          </a>
+        </li>
+      </ul>
     </div>
-    <div>
+    <div class="col">
       <h4>Social</h4>
-      <p>
-        <a href={facebookURL} class="link-item" target="_blank" rel="noopener" >Facebook</a>
-        <a href={instagramURL} class="link-item" target="_blank" rel="noopener" >Instagram</a>
-        <a href={githubURL} class="link-item" target="_blank" rel="noopener" >Github</a>
-      </p>
+      <ul class="footer-links">
+        <li>
+          <a href={facebookURL} target="_blank" rel="noopener">Facebook</a>
+        </li>
+        <li>
+          <a href={instagramURL} target="_blank" rel="noopener">Instagram</a>
+        </li>
+        <li>
+          <a href={githubURL} target="_blank" rel="noopener">Github</a>
+        </li>
+      </ul>
     </div>
   </nav>
 
@@ -92,5 +113,4 @@
       </a>
     </p>
   </div>
-
 </footer>
