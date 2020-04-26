@@ -50,7 +50,7 @@ jobs:
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
-          args: deploy --only hosting:production,hosting:cdn --project fuse-fonts
+          args: deploy --message "CICD Deployment" --only hosting:production,hosting:cdn --project fuse-fonts
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
           CI: true
