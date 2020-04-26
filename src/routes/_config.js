@@ -9,6 +9,11 @@ export const sendGridSignupURL = "https://cdn.forms-content.sg-form.com/1e965d7f
 export const productDescription = "Organize your fonts into simple collections within Adobe Photoshop";
 export const productionURL = "https://fusefonts.com";
 export const logoURL = "https://cdn.fusefonts.com/meta/fuse-fonts-logo.png";
+export const promoURL = "https://cdn.fusefonts.com/meta/exchange_promo.png";
 
 export const creativeMarketPrice = "12";
 export const adobeExchangePrice = "12";
+
+export const facebookURL = "https://www.facebook.com/fusefonts/";
+export const instagramURL = "https://www.instagram.com/fusefonts/";
+export const githubURL = "https://github.com/fuse-fonts/";

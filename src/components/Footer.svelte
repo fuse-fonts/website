@@ -3,7 +3,10 @@
   import {
     sendGridSignupURL,
     contactEmailAddress,
-    supportEmailAddress
+    supportEmailAddress,
+    facebookURL,
+    instagramURL,
+    githubURL,
   } from "../routes/_config.js";
 
   import Logo from "./Logo.svelte";
@@ -23,6 +26,10 @@
 
   .muted {
     color: #888;
+  }
+
+  .link-item {
+    display: block;
   }
 
   h4 {
@@ -48,8 +55,7 @@
     <div>
       <h4>News</h4>
       <p>
-        <a href={sendGridSignupURL} target="_blank">Email Updates</a>
-        <br />
+        <a class="link-item" href={sendGridSignupURL} target="_blank">Email Updates</a>
         <span class="muted">
           Subscribe to Fuse Fonts product updates and special offers
         </span>
@@ -59,23 +65,29 @@
     <div>
       <h4>Contact</h4>
       <p>
-        <a href={`mailto:${contactEmailAddress}`} target="_blank">
+        <a class="link-item" href={`mailto:${contactEmailAddress}`} target="_blank" rel="noopener">
           {contactEmailAddress}
         </a>
-        <br />
-        <a href={`mailto:${supportEmailAddress}`} target="_blank">
+        <a class="link-item" href={`mailto:${supportEmailAddress}`} target="_blank" rel="noopener">
           {supportEmailAddress}
         </a>
       </p>
     </div>
-
+    <div>
+      <h4>Social</h4>
+      <p>
+        <a href={facebookURL} class="link-item" target="_blank" rel="noopener" >Facebook</a>
+        <a href={instagramURL} class="link-item" target="_blank" rel="noopener" >Instagram</a>
+        <a href={githubURL} class="link-item" target="_blank" rel="noopener" >Github</a>
+      </p>
+    </div>
   </nav>
 
   <div class="logo-container">
     <Logo />
     <p>
       ❤
-      <a class="open-source" href="https://github.com/fuse-fonts/website" target="_blank">
+      <a class="open-source" href={githubURL} rel="noopener" target="_blank">
         Open Source
       </a>
     </p>
