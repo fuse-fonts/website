@@ -20,14 +20,14 @@
   
   <h4>Fuse Fonts Logo</h4>
   <p>
-    <a href={logoURL} target="_blank">
+    <a href={logoURL} download="fuse-fonts-logo.png">
       <img src={logoURL} alt="Fuse Fonts Logo" />
     </a>
   </p>
 
   <h4>Fuse fonts Promotional Image </h4>
     <p>
-      <a href={promoURL} target="_blank">
+      <a href={promoURL} download="fuse-fonts-promo.png">
         <img src={promoURL} alt="Fuse Fonts Promo" />
       </a>
     </p>
