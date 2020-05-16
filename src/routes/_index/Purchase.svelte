@@ -1,12 +1,8 @@
 <script>
   import { getContext } from "svelte";
   import Container from "../../components/Container.svelte";
-  import { contactEmailAddress, creativeMarketPrice, adobeExchangePrice, sendGridSignupURL  } from "../_config.js";
-
-  const storeURL = {
-    CREATIVE_MARKET: "https://creativemarket.com/",
-    ADOBE_EXCHANGE: "https://exchange.adobe.com/creativecloud.details.102714.html",
-  };
+  import SupportRegion from "../../components/SupportRegion.svelte";
+  import { contactEmailAddress, creativeMarketPrice, adobeExchangePrice, sendGridSignupURL, storeURLs  } from "../_config.js";
 
   let el = null;
 
@@ -20,7 +16,7 @@ const getLogPurchaseOption = getContext("logPurchaseOption");
 const storeLinkClicked = (e) => {
 
   const linkClicked = e.currentTarget.href;
-  const item = Object.keys(storeURL).find(key => storeURL[key] === linkClicked);
+  const item = Object.keys(storeURLs).find(key => storeURLs[key] === linkClicked);
 
   if (!item || !linkClicked) return;
   const logPurchaseOption = getLogPurchaseOption();
@@ -51,14 +47,13 @@ const storeLinkClicked = (e) => {
   }
 
   .purchase {
+    padding: 1em 0;
     min-height: 92vh;
     display: flex;
     justify-content: center;
     flex-flow: column nowrap;
     background-color: #cacfcc;
     color: #333;
-    margin-bottom: -2em;
-    padding-bottom: 2em;
   }
 
   .purchase-options {
@@ -104,21 +99,6 @@ const storeLinkClicked = (e) => {
     margin: 0 0;
   }
 
-  .other-options {
-    color: #666;
-    padding: 5vh 1em;
-    text-align: center;
-    margin: 0 0;
-  }
-
-  .other-options a {
-    color: #333;
-  }
-
-  .temp-long-msg {
-    padding: 2em 2em 0em 2em;
-  }
-
 
   @media (min-width: 56em) {
     .purchase .option {
@@ -141,13 +121,13 @@ const storeLinkClicked = (e) => {
         <ul>
           <li class="price">{adobeExchangePrice}</li>
           <li>Individual License / 4 Devices</li>
+          <li>Email & Chat Support</li>
           <li>Full Features</li>
-          <li>Version 1.x Free Updates</li>
-          <li>Email Support</li>
-          <li>Automatically Updates</li>
+          <li>Free Updates</li>
+          <li>Automatically Updates via Creative Cloud</li>
         </ul>
         <footer>
-          <a href={storeURL.ADOBE_EXCHANGE}
+          <a href={storeURLs.ADOBE_EXCHANGE}
              on:click={storeLinkClicked}
              target="_blank"
              class="btn-link btn-link--buy">Buy on Adobe Marketplace</a>
@@ -160,29 +140,23 @@ const storeLinkClicked = (e) => {
         </header>
 
         <ul>
-
-          <li>
-            <button class="btn-link btn-link--buy" disabled>Coming Soon</button>
-          </li>
-          <li class="temp-long-msg">Subscribe to email updates to get notifed when Fuse Fonts is available on Creative Market</li>
-          <!-- <li class="price">{creativeMarketPrice}</li>
-          <li>Individual License / Unlimited Devices</li>
+          <li class="price">{creativeMarketPrice}</li>
+          <li>Personal License / Unlimited Devices</li>
+          <li>Email & Chat Support</li>
           <li>Full Features</li>
-          <li>Version 1.x Free Updates</li>
-          <li>Email Support</li>
-          <li>Update On Your Schedule</li> -->
+          <li>Free Updates</li>
+          <li>Manual Updates, Self-installer</li>
         </ul>
         <footer>
-          <a href={sendGridSignupURL}
+          <a href={storeURLs.CREATIVE_MARKET}
              on:click={storeLinkClicked}
              target="_blank"
-             class="btn-link btn-link--buy">Subscribe to updates</a>
+             class="btn-link btn-link--buy">Buy on Creative Market</a>
         </footer>
       </div>
     </div>
 
-    <p class="other-options">
-      For other licensing options, please inquire at <a href="mailto:{contactEmailAddress}">{contactEmailAddress}</a>.
-    </p>
+    <SupportRegion inline={false} />
+
   </Container>
 </section>

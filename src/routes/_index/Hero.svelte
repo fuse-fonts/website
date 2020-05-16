@@ -46,7 +46,6 @@
     display: flex;
     justify-content: center;
     flex-flow: column nowrap;
-    margin-top: -2em;
   }
 
   .hero-actions {

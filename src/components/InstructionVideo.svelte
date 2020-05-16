@@ -1,5 +1,5 @@
 <script>
-  import PlayIcon from "./PlayIcon.svelte";
+  import PlayIcon from "./icons/PlayIcon.svelte";
   import { fade } from "svelte/transition";
 
   export let url = "";

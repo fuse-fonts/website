@@ -12,6 +12,14 @@
   let purchase = null;
 </script>
 
+<style>
+  .maximized {
+    margin-top: -2em;
+    margin-bottom: -2em;
+  }
+
+</style>
+
 <svelte:head>
   <title>Fuse Fonts</title>
   <meta name="description" content={productDescription} />
@@ -22,12 +30,15 @@
 
 </svelte:head>
 
-<Container>
-  <Hero
-    on:learn-more={() => overview.scrollIntoView()}
-    on:buy={() => purchase.scrollIntoView()} />
-</Container>
+<div class="maximized">
+  <Container>
+    <Hero
+      on:learn-more={() => overview.scrollIntoView()}
+      on:buy={() => purchase.scrollIntoView()} />
+  </Container>
 
-<Overview bind:this={overview} />
+  <Overview bind:this={overview} />
 
-<Purchase bind:this={purchase} />
+  <Purchase bind:this={purchase} />
+
+</div>

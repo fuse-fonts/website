@@ -1,7 +1,7 @@
 <script>
 
   import { slide } from 'svelte/transition';
-  import Chevron from "./Chevron.svelte";
+  import Chevron from "./icons/Chevron.svelte";
 
 
   export let collapsed = true;
