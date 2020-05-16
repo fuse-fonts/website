@@ -11,9 +11,14 @@ export const productionURL = "https://fusefonts.com";
 export const logoURL = "https://cdn.fusefonts.com/meta/fuse-fonts-logo.png";
 export const promoURL = "https://cdn.fusefonts.com/meta/exchange_promo.png";
 
-export const creativeMarketPrice = "4";
+export const creativeMarketPrice = "8";
 export const adobeExchangePrice = "4";
 
 export const facebookURL = "https://www.facebook.com/fusefonts/";
 export const instagramURL = "https://www.instagram.com/fusefonts/";
 export const githubURL = "https://github.com/fuse-fonts/";
+
+export const storeURLs = {
+  CREATIVE_MARKET: "https://creativemarket.com/",
+  ADOBE_EXCHANGE: "https://exchange.adobe.com/creativecloud.details.102714.html",
+};
