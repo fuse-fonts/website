@@ -3,8 +3,6 @@
   import Container from "../../components/Container.svelte";
   import { contactEmailAddress, creativeMarketPrice, adobeExchangePrice, sendGridSignupURL, storeURLs  } from "../_config.js";
 
-
-
   let el = null;
 
   export const scrollIntoView = () => {
