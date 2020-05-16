@@ -17,8 +17,10 @@ export const adobeExchangePrice = "4";
 export const facebookURL = "https://www.facebook.com/fusefonts/";
 export const instagramURL = "https://www.instagram.com/fusefonts/";
 export const githubURL = "https://github.com/fuse-fonts/";
+export const messengerURL = "https://m.me/fusefonts";
 
 export const storeURLs = {
   CREATIVE_MARKET: "https://creativemarket.com/fusefonts/4952681-Fuse-Fonts",
   ADOBE_EXCHANGE: "https://exchange.adobe.com/creativecloud.details.102714.html",
 };
+
