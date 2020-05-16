@@ -1,8 +1,9 @@
 # Fuse Fonts Website
 
-![CI/CD](https://github.com/fuse-fonts/website/workflows/CI/CD/badge.svg)
 This is the Fuse Fonts website built using Firebase, Sapper, and Svelte.
 
+#### Status
+![CI/CD](https://github.com/fuse-fonts/website/workflows/CI/CD/badge.svg)
 
 ## Resources
 
