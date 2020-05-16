@@ -50,6 +50,10 @@
     margin: 2em 0;
   }
 
+  :global(.nm) {
+    margin: 0 0;
+  }
+
 </style>
 
 <Nav {segment} />

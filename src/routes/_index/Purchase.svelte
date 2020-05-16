@@ -1,6 +1,7 @@
 <script>
   import { getContext } from "svelte";
   import Container from "../../components/Container.svelte";
+  import SupportRegion from "../../components/SupportRegion.svelte";
   import { contactEmailAddress, creativeMarketPrice, adobeExchangePrice, sendGridSignupURL, storeURLs  } from "../_config.js";
 
   let el = null;
@@ -46,14 +47,13 @@ const storeLinkClicked = (e) => {
   }
 
   .purchase {
+    padding: 1em 0;
     min-height: 92vh;
     display: flex;
     justify-content: center;
     flex-flow: column nowrap;
     background-color: #cacfcc;
     color: #333;
-    margin-bottom: -2em;
-    padding-bottom: 2em;
   }
 
   .purchase-options {
@@ -97,21 +97,6 @@ const storeLinkClicked = (e) => {
     color: #000;
     font-size: 1.6em;
     margin: 0 0;
-  }
-
-  .other-options {
-    color: #666;
-    padding: 5vh 1em;
-    text-align: center;
-    margin: 0 0;
-  }
-
-  .other-options a {
-    color: #333;
-  }
-
-  .temp-long-msg {
-    padding: 2em 2em 0em 2em;
   }
 
 
@@ -171,8 +156,7 @@ const storeLinkClicked = (e) => {
       </div>
     </div>
 
-    <p class="other-options">
-      For other licensing options, please inquire at <a href="mailto:{contactEmailAddress}">{contactEmailAddress}</a>.
-    </p>
+    <SupportRegion inline={false} />
+
   </Container>
 </section>

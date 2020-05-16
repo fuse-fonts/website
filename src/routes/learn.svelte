@@ -4,6 +4,7 @@
   import HelpDefinition from "../components/HelpDefinition.svelte";
   import InstructionVideo from "../components/InstructionVideo.svelte";
   import OpenGraphMetaTags from "../components/OpenGraphMetaTags.svelte";
+  import SupportRegion from "../components/SupportRegion.svelte";
 
   import instructions from "./_learn.js";
   import { cdnURL, productionURL } from "./_config.js";
@@ -95,5 +96,6 @@
       {/each}
     </ul>
   </div>
-
 </Container>
+
+<SupportRegion color="#ddd" title="Is something missing / need help?" />

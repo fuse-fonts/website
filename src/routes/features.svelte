@@ -1,6 +1,7 @@
 <script>
   import Container from "../components/Container.svelte";
   import OpenGraphMetaTags from "../components/OpenGraphMetaTags.svelte";
+  import SupportRegion from "../components/SupportRegion.svelte";
   import { productionURL } from "./_config.js";
   const metaURL = `${productionURL}/features`;
 
@@ -49,7 +50,7 @@
       <li>Change your system folders</li>
       <li>Change Fonts within Photoshop</li>
       <li>
-        Fine-grained control over fonts. The Character Panel already does that
+        Fine-grained control over fonts. The Character Panel already does that for you
       </li>
     </ul>
   </div>
@@ -63,4 +64,7 @@
       <a href="learn" class="btn-link">Learn to use Fuse Fonts</a>
     </p>
   </div>
+  
 </Container>
+
+<SupportRegion color="#ddd" title="What would make Fuse Fonts better?" />
