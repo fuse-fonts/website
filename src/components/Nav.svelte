@@ -1,6 +1,6 @@
 <script>
   import { demoURL } from "../routes/_config.js";
-  import Chevron from "./Chevron.svelte";
+  import Chevron from "./icons/Chevron.svelte";
   import Logo from "./Logo.svelte";
   export let segment;
 </script>
